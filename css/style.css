@@ -209,105 +209,58 @@ span    {
     animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
 }
 
-/* Common container style for Education & Experience */
-.timeline-section {
-    background: var(--second-bg-color);
-    padding: 6rem 9%;
-    max-width: 900px;
-    margin: 5rem auto;
-    border-radius: 2rem;
-    color: var(--text-color);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-.timeline-section h2 {
-    text-align: center;
-    font-size: 4rem;
-    color: var(--main-color);
-    margin-bottom: 5rem;
-    font-weight: 700;
-}
-
-/* Timeline container */
-.timeline {
-    position: relative;
-    margin-left: 2rem;
-    padding-left: 2rem;
-    border-left: 4px solid var(--main-color);
-}
-
-/* Each timeline item */
-.timeline-item {
-    position: relative;
-    margin-bottom: 4rem;
-    padding-left: 3rem;
-    background: var(--bg-color);
-    border-radius: 1.5rem;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-/* Circle marker on timeline */
-.timeline-item::before {
-    content: "";
-    position: absolute;
-    left: -11px;
-    top: 20px;
-    width: 18px;
-    height: 18px;
-    background: var(--main-color);
-    border-radius: 50%;
-    border: 3px solid var(--bg-color);
-    box-shadow: 0 0 8px var(--main-color);
-}
-
-/* Hover effect */
-.timeline-item:hover {
-    transform: translateY(-6px);
-}
-
-/* Content inside each timeline item */
-.timeline-item h3 {
-    font-size: 2.2rem;
-    margin-bottom: 0.3rem;
-    font-weight: 700;
-}
-
-.timeline-item h4 {
-    font-size: 1.6rem;
-    color: var(--main-color);
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-}
-
-.timeline-item span {
-    font-size: 1.3rem;
-    font-style: italic;
-    color: #999;
-    margin-bottom: 1rem;
-    display: block;
-}
-
-.timeline-item p {
-    font-size: 1.5rem;
-    line-height: 1.6;
-}
-
-/* Responsive tweak */
 @media (max-width: 768px) {
+    .timeline-section {
+        padding: 4rem 5%;
+    }
+
+    .timeline-section h2 {
+        font-size: 3.2rem;
+    }
+
     .timeline {
-        margin-left: 0;
-        padding-left: 0;
         border-left: none;
+        padding-left: 0;
+        margin-left: 0;
     }
 
     .timeline-item {
-        padding-left: 2rem;
+        padding: 2rem;
+        background: var(--bg-color);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        margin-bottom: 3rem;
+        border-left: 4px solid var(--main-color);
+        border-radius: 1.5rem;
+        position: relative;
     }
 
     .timeline-item::before {
-        left: 0;
-        top: 10px;
+        content: "";
+        position: absolute;
+        left: -9px;
+        top: 20px;
+        width: 16px;
+        height: 16px;
+        background: var(--main-color);
+        border-radius: 50%;
+        border: 2px solid var(--bg-color);
+        box-shadow: 0 0 6px var(--main-color);
+    }
+
+    .timeline-item h3 {
+        font-size: 2rem;
+    }
+
+    .timeline-item h4 {
+        font-size: 1.5rem;
+    }
+
+    .timeline-item p {
+        font-size: 1.4rem;
+    }
+
+    .timeline-item span {
+        font-size: 1.2rem;
     }
 }
 
